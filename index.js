@@ -3,7 +3,7 @@ var fs		= require("fs"),
 	es		= require("event-stream"),
 	gutil	= require("gulp-util");
 
-DIRECTIVE_REGEX = /^(.*=\s*(require|include|require_tree|include_tree)\s+([\w\.\/-]+))$/gm;
+DIRECTIVE_REGEX = /^(.*=\s*(require|include|require_tree|include_tree)\s+([\w\.\/-]+))$\s*/gm;
 IS_HIDDEN_REGEX = /(^|.\/)\.+[^\/\.]/g;
 
 function getFiles(dir, cb){
